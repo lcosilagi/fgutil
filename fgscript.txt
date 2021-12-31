@@ -1,0 +1,50 @@
+# Arquivo gerado por fgutil v0.1 em 31/12/2021 - 14:08:24
+# Desenvolvido por Lupas
+
+config firewall address
+edit ADDHQFS
+set subnet 192.168.60.3/32
+set color 23
+set comment "Servidor de Email"
+end
+
+config firewall address
+edit NET-192.168.60.0-24
+set subnet 192.168.60.0/24
+set color 19
+set comment "Criado por fgutil v0.1"
+end
+
+config firewall address
+edit NET-192.168.70-0-24
+set subnet 192.168.70.0/24
+set color 19
+set comment "Criado por fgutil v0.1"
+end
+
+config firewall addgrp
+edit REDES_CORP
+set comment "Criado por fgutil v0.1"
+set member "NET1"
+set member "NET2"
+set member "NET3"
+set member "NET4"
+end
+
+config firewall addgrp
+edit SERVIDORES_EMAIL
+set comment "servidores de email"
+set member "SE1"
+set member "SE2"
+set member "SE3"
+end
+
+config firewall addgrp
+set comment "servidor AD Corp"
+set member "AD1"
+set member "AD2"
+set member "AD3"
+set member "AD4"
+set member "AD5"
+end
+
